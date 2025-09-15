@@ -1,0 +1,88 @@
+{
+  // ========================================
+  // TYPESCRIPT CONFIGURATION FOR BSM PLATFORM
+  // Enterprise-grade TypeScript setup with strict type checking
+  // Configured for Next.js 14 with App Router support
+  // Includes path mapping for clean imports across the application
+  // Optimized for development experience with IntelliSense
+  // Strict mode enabled for better code quality and safety
+  // Module resolution configured for modern JavaScript features
+  // Includes experimental decorators for advanced patterns
+  // JSX configuration for React 18 with automatic runtime
+  // Source maps enabled for better debugging experience
+  // Incremental compilation for faster development builds
+  // ========================================
+  
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable", 
+      "ES6",
+      "ES2022"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/store/*": ["./src/store/*"],
+      "@/utils/*": ["./src/lib/utils/*"],
+      "@/services/*": ["./src/lib/services/*"],
+      "@/config/*": ["./src/lib/config/*"],
+      "@/schemas/*": ["./src/lib/schemas/*"]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": true,
+    "removeComments": false,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/**/*",
+    "tests/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build"
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
+}
